@@ -1,0 +1,34 @@
+{
+  "tenant_id": "caete_mg_3110004",
+  "raw_candidates_scanned": 800,
+  "atomic_candidates_after_split": 1604,
+  "multi_act_chunks_split": 477,
+  "unique_individual_acts": 145,
+  "duplicates_eliminated": 1484,
+  "duplication_rate_eliminated_pct": 92.52,
+  "ligatures_repaired": 757,
+  "hyphenations_repaired": 4339,
+  "orphan_closing_tails_detected_and_repaired": 0,
+  "golden_benchmark_leakage_removed": true,
+  "qdrant_historical_stats": {
+    "raw_points_in_qdrant_before": 9346,
+    "numbered_act_headers_in_qdrant_before": 3020,
+    "unique_numbered_acts_in_inventory": 747,
+    "singletons_before_fix": 54,
+    "duplicated_2x_before_fix": 498,
+    "duplicated_4x_or_more_before_fix": 195,
+    "duplicate_points_before_pct": 47.9,
+    "unique_points_after_act_dedup": 120
+  },
+  "acts_by_type": {
+    "DECRETO": 94,
+    "LEI": 35,
+    "EDITAL / LICITAÇÃO": 4,
+    "OUTROS": 2,
+    "PORTARIA": 5,
+    "GERAL / OUTROS": 1,
+    "TERMO ADITIVO": 1,
+    "RESOLUÇÃO": 1,
+    "EXTRATO CONTRATUAL": 2
+  }
+}

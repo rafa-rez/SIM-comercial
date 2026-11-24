@@ -1,0 +1,21 @@
+FROM python:3.11-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/workspace
+
+WORKDIR /workspace
+
+# Fontes DejaVu para renderização nítida de tabelas e gráficos PNG institucionais no Linux
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends fonts-dejavu-core \
+    && rm -rf /var/lib/apt/lists/*
+
+# Instala dependências sincronizadas com requirements.txt na camada da imagem
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt \
+    && rm -f /tmp/requirements.txt
+
+EXPOSE 8000
+
+CMD ["uvicorn", "sim_platform.api.app:app", "--host", "0.0.0.0", "--port", "8000"]
